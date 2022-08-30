@@ -20,7 +20,7 @@ describe('Verifica tela de login', () => {
   });
 
   test(
-    'Teste se é exibido o próximo pokémon quando o botão Próximo pokémon é clicado',
+    'Teste se é renderizado carteira',
     () => {
       renderWithRouter(<App />);
       const button = screen.getByRole('button', { name: /entrar/i });
