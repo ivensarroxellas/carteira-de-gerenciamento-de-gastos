@@ -1,4 +1,4 @@
-import { REQUEST_API, RESPONSE_API, GET_API_ERROR } from '../actions/actionTypes';
+import { REQUEST_API, RESPONSE_API } from '../actions/actionTypes';
 // Esse reducer será responsável por tratar o todas as informações relacionadas as despesas
 const INITIAL_STATE = {
   currencies: [], // array de string
@@ -15,13 +15,9 @@ const wallet = (state = INITIAL_STATE, action) => {
   case RESPONSE_API:
     return { ...state,
       currencies: Object.keys(action.payload2).filter((currency) => currency !== 'USDT'),
-      /* expenses: [...action.payload2.expenses],
-      editor: action.payload2.editor,
+      /* expenses: [...action.payload2.expenses], */
+      /*editor: action.payload2.editor,
       idToedit: action.payload2.idToedit, */
-    };
-  case GET_API_ERROR:
-    return { ...state,
-      error: err,
     };
   default:
     return state;
