@@ -15,8 +15,8 @@ const wallet = (state = INITIAL_STATE, action) => {
   case RESPONSE_API:
     return { ...state,
       currencies: Object.keys(action.payload2).filter((currency) => currency !== 'USDT'),
-      /* expenses: [...action.payload2.expenses], */
-      /*editor: action.payload2.editor,
+      /* expenses: [...action.payload2.expenses],
+      editor: action.payload2.editor,
       idToedit: action.payload2.idToedit, */
     };
   default:

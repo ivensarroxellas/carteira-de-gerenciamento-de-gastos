@@ -6,6 +6,8 @@ import Login from '../pages/Login';
 import Wallet from '../pages/Wallet';
 import App from '../App';
 
+const { handleSubmit } = require('../components/WalletForm');
+
 describe('Verifica tela de login', () => {
   test('Verifica página de login', () => {
     renderWithRouter(<Login />);
