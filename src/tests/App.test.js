@@ -12,11 +12,13 @@ describe('Verifica tela de login', () => {
     const titleElement = screen.getByRole('heading', { level: 1, name: /login/i });
     expect(titleElement).toBeInTheDocument();
   });
+
   test('Verifica se possui o botão para entrar', () => {
     renderWithRouter(<Login />);
     const button = screen.getByRole('button', { name: /entrar/i });
     expect(button).toBeInTheDocument();
   });
+
   test(
     'Teste se é exibido o próximo pokémon quando o botão Próximo pokémon é clicado',
     () => {
@@ -30,6 +32,7 @@ describe('Verifica tela de login', () => {
     },
   );
 });
+
 describe('Verifica tela da carteira', () => {
   test('Verifica página da carteira', () => {
     renderWithRouter(<Wallet />);
