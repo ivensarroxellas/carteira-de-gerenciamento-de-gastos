@@ -45,7 +45,6 @@ class Table extends Component {
                     <td>
                       {(
                         ex.value * ex.exchangeRates[ex.currency].ask).toFixed(2)}
-
                     </td>
                     <td>Real</td>
                     <td>
