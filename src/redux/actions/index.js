@@ -1,12 +1,12 @@
 import { USER_ACTION, REQUEST_API,
-  RESPONSE_API, RESPONSE_BUT } from './actionTypes';
+  RESPONSE_API, RESPONSE_BUT, UPDATE_EXPENSES } from './actionTypes';
 
 export const handleUser = (email) => ({ type: USER_ACTION, payload1: email });
 export const requestApi = () => ({ type: REQUEST_API });
 export const responseApi = (payload2) => ({ type: RESPONSE_API, payload2 });
 export const responseNewApi = (expenses, resultCurrency) => ({
   type: RESPONSE_BUT, expenses, resultCurrency });
-
+export const updateExpenses = (expenses) => ({ type: UPDATE_EXPENSES, expenses });
 // middleware -- thunk  - AULA DO RAFA
 export function fetchApi() {
   return async (dispatch) => {

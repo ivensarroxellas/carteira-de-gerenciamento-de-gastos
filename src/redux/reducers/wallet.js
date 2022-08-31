@@ -1,4 +1,5 @@
-import { REQUEST_API, RESPONSE_API, RESPONSE_BUT } from '../actions/actionTypes';
+import { REQUEST_API, RESPONSE_API, RESPONSE_BUT,
+  UPDATE_EXPENSES } from '../actions/actionTypes';
 // Esse reducer será responsável por tratar o todas as informações relacionadas as despesas
 const INITIAL_STATE = {
   currencies: [], // array de string
@@ -31,7 +32,9 @@ const wallet = (state = INITIAL_STATE, action) => {
   case RESPONSE_BUT: return { ...state,
     expenses: [...state.expenses, newQuote(action.expenses, action.resultCurrency)],
   };
-
+  case UPDATE_EXPENSES: return { ...state,
+    expenses: [...action.expenses],
+  };
   default:
     return state;
   }
