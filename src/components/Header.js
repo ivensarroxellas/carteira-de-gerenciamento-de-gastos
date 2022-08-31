@@ -10,6 +10,7 @@ class Header extends Component {
     };
   }
 
+  // Victor Matias ajudou imensamento no req 4
   calculate = (expenses) => expenses.reduce((acc, curr) => {
     const { value } = curr;
     const { currency } = curr;

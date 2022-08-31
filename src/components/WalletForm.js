@@ -130,8 +130,10 @@ class WalletForm extends Component {
 const mapStateToProps = (state) => ({
   currencies: state.wallet.currencies,
 });
+
 WalletForm.propTypes = {
   dispatch: PropTypes.func.isRequired,
   currencies: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
+
 export default connect(mapStateToProps)(WalletForm);
