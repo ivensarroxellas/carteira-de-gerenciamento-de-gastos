@@ -43,7 +43,7 @@ describe('Verifica tela da carteira', () => {
 });
 // Teste abaixo tive auxílio do Rafael Miranda
 describe('Verifica se chama botão despesa', () => {
-  test('Verifica se despesa é adicionada', async () => {
+  test('Verifica se despesa é adicionada', () => {
     renderWithRouter(<WalletForm />);
     const inputValue = screen.getByTestId('value-input');
     const inputDescription = screen.getByTestId('description-input');
